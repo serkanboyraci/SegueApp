@@ -9,7 +9,8 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var userName = " "
+    var userName = " " //en basta bir userName tanimlayarak class icindeki hereksin
+    // ulasmasini sagladik.
     
     @IBOutlet var firstVCLabel: UILabel!
     
@@ -47,6 +48,7 @@ class ViewController: UIViewController {
     @IBAction func nextClicked(_ sender: Any) {
         
         userName = nameTextField.text!
+        // nextclicked yapildiginda segue olmadan once userName i nameTextfieldde girilen degere esitledik
     
         performSegue(withIdentifier: "toSecondVC", sender: nil)
         
@@ -55,10 +57,14 @@ class ViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toSecondVC" {
             
-            // as
+            // as-Casting
+            // destinationVC yi segue destinationi ama secondVC destinationi olarak tanimladik.
             let destinationVC = segue.destination as! SecondVC
-            destinationVC.myName = userName
             
+            // bu sayede destinationVC. yapinca 2.VC deki tum degiskenlere ulasabildik.
+            destinationVC.myName = userName
+            // segue olduktan sonra 2.VC de ulastigimiz myName degiskenine userName
+            // degiskenini tanimladik.
             
         }
     }
