@@ -21,7 +21,7 @@ class ViewController: UIViewController {
         print("viewDidLoad function called")
         
     }
-    
+    //Lifecycle
     //çalışma sırası alttaki şekildedir.
     override func viewWillAppear(_ animated: Bool) {
         print("viewWillAppear function called")
@@ -30,7 +30,7 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         print("viewDidAppear function called")
-        //nameTextField.text = "" görüyorsun sonradan siliniyor.
+        //nameTextField.text = "" //görüyorsun sonradan siliniyor.
     }
   
     override func viewWillDisappear(_ animated: Bool) {
