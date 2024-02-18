@@ -23,9 +23,10 @@ class ViewController: UIViewController {
     }
     //Lifecycle
     //çalışma sırası alttaki şekildedir.
+    // tabiki ilk olarak viewDidLoad vardir. Ancak viedDidLoad saece uygulamam acilirken 1 KEZ calisir.
     override func viewWillAppear(_ animated: Bool) {
         print("viewWillAppear function called")
-             nameTextField.text = "" //görmeden siliniyor
+              nameTextField.text = "" //görmeden siliniyor
     }
     
     override func viewDidAppear(_ animated: Bool) {
