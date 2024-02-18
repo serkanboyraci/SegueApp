@@ -25,7 +25,7 @@ class ViewController: UIViewController {
     //çalışma sırası alttaki şekildedir.
     override func viewWillAppear(_ animated: Bool) {
         print("viewWillAppear function called")
-        nameTextField.text = "" //görmeden siliniyor
+             nameTextField.text = "" //görmeden siliniyor
     }
     
     override func viewDidAppear(_ animated: Bool) {
